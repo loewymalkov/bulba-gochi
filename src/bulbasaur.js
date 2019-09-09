@@ -1,24 +1,30 @@
 export class Bulbasaur {
   constructor() {
-      this.hunger = 0;
-      this.name = 'Bulbasaur';
+    this.hunger = 0;
+    this.name = 'Bulbasaur';
   }
 
-  increaseHunger() {
-    this.hunger = setInterval(() => {
+
+
+  increaseHunger(output) {
+    setInterval(() => {
       this.hunger ++;
-    }, 3000);
+      console.log('updated hunger status', this.hunger);
+      output.text(this.hunger);
+    }, 2000);
   }
 
   tooHungryWeOut() {
-    if (this.hunger <= 11) {
+    if (this.hunger < 10) {
       return false;
     } else {
-       return true;
+      return true;
     }
   }
 
   feed() {
     this.hunger --;
+
   }
+
 }
