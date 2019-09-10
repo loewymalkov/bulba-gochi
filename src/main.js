@@ -24,6 +24,7 @@ $(document).ready(function() {
       let request = new XMLHttpRequest();
       const url = 'https://api.giphy.com/v1/gifs/search?api_key=3PLINuqhz03BffpRF1GEqFiAsHS4Aqv0&q=bulbasaur&limit=5&offset=0&rating=PG&lang=en';
 
+
       request.onreadystatechange = function() {
         if (this.readyState === 4 && this.status === 200) {
           const response = JSON.parse(this.responseText);
@@ -35,7 +36,7 @@ $(document).ready(function() {
       request.send();
 
       const getElements = function(response) {
-        $('#bulba-been-fed').text(`${response.data[0].images.original.mp4}`);
+        $('#bulba-been-fed').html(`<img src='${response.data[0].images.original.url}'>`);
       };
 
     });
