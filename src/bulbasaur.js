@@ -1,3 +1,5 @@
+export let startGame;
+
 export class Bulbasaur {
   constructor() {
     this.hunger = 0;
@@ -7,11 +9,11 @@ export class Bulbasaur {
 
 
   increaseHunger(output) {
-    setInterval(() => {
+    startGame = setInterval(() => {
       this.hunger ++;
       console.log('updated hunger status', this.hunger);
       output.text(this.hunger);
-    }, 2000);
+    }, 1000);
   }
 
   tooHungryWeOut() {
@@ -23,8 +25,7 @@ export class Bulbasaur {
   }
 
   feed() {
-    this.hunger --;
-
+    this.hunger -= 2;
   }
 
 }
