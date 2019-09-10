@@ -1,0 +1,22 @@
+body {
+  background-image: url("https://uploads.disquscdn.com/images/9a218eddc93dcc0ae938674999071532f161f5de018594f91d446c917af254a8.png");
+  background-attachment: fixed;
+  text-align: center;
+  color: green;
+}
+h1 {
+  font-size: 70px;
+}
+.container {
+  margin-top: 10%;
+}
+#bulba-out{
+  font-size: 45px;
+  color: white;
+}
+#hunger-level {
+  font-size: 80px;
+}
+img {
+  width: 300px;
+}

@@ -18,7 +18,6 @@ $(document).ready(function() {
       btn.prop('disabled', false);
     }, 1000);
     bulba.feed();
-    console.log('hunger after bulba fed', bulba.hunger);
     let request = new XMLHttpRequest();
     const url = 'https://api.giphy.com/v1/gifs/search?api_key=3PLINuqhz03BffpRF1GEqFiAsHS4Aqv0&q=bulbasaur&limit=5&offset=0&rating=PG&lang=en';
 
@@ -34,7 +33,6 @@ $(document).ready(function() {
 
     const getElements = function(response) {
       $('#bulba-been-fed').html(`<img src='${response.data[0].images.original.url}'>`);
-      console.log('after api');
     };
   });
 

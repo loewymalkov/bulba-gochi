@@ -11,7 +11,6 @@ export class Bulbasaur {
   increaseHunger(output) {
     startGame = setInterval(() => {
       this.hunger ++;
-      console.log('updated hunger status', this.hunger);
       output.text(this.hunger);
     }, 1000);
   }
